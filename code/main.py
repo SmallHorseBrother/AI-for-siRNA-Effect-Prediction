@@ -573,7 +573,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Train SiRNA Model")
     parser.add_argument("--device", type=str, default="cuda", help="Device to use for training and inference")
     parser.add_argument("--epoch", type=int, default=200, help="Epoch for training")
-    parser.add_argument("--clip", type=str2bool, nargs='?', const=False, default=True, help="Clip mRNA_remaining_pct to [0, 120]")
+    parser.add_argument("--clip", type=str2bool, nargs='?', const=False, default=False, help="Clip mRNA_remaining_pct to [0, 120]")
     parser.add_argument("--test_size", type=float, default=0.1, help="Test size for train/val split")
     parser.add_argument("--random_state", type=int, default=1234, help="Random state for train/val split")
     parser.add_argument("--weight_0_30", type=float, default= 1.2, help="Loss weight for mRNA_remaining_pct < 30")
