@@ -42,5 +42,8 @@ project
 |   |-- submit_20240822.csv
 ```
 
+## Explanation of External Datasets
+- Regarding the external dataset, we did not use additional samples; instead, we calculated some derived features based on the existing samples, such as the binding affinity between siRNA and target mRNA.
+
 ## Random Seed
 - To ensure reproducibility, random seeds are set in the code. 
