@@ -17,18 +17,12 @@ The environment dependencies are listed in the `environment.yaml` file. You can 
 
 ```bash
 conda env create -f environment.yaml
-
-## Environment Setup
-The environment dependencies are listed in the `environment.yaml` file. You can create the Conda environment using the following command:
-
-```bash
-conda env create -f environment.yaml
 ```
 
 ### Environment Dependencies
 The `environment.yaml` file includes:
 - **Conda Channels:** `pytorch`, `defaults`
-- **Dependencies:** Various packages including `pytorch` 1.12.1 with CUDA 10.2, `numpy`, `pandas`, `scikit-learn`, and others.
+- **Dependencies:** Various packages including `pytorch` 1.12.1 with CUDA 10.2, `viennarna==2.6.4`,`numpy==1.24.4`, `pandas==1.5.3`, `scikit-learn==1.3.0`, and others.
 
 The complete list of dependencies is detailed in the `environment.yaml` file, which includes package versions and additional pip-installed packages.
 
@@ -36,56 +30,17 @@ The complete list of dependencies is detailed in the `environment.yaml` file, wh
 ```
 project
 |-- README.md
+|-- sirna_prediction_environment.yaml
 |-- data
 |   |-- external_data
-|   |   |-- trainmap.csv
-|   |   |-- traindata.csv
-|   |   |-- testmap.csv
-|   |   |-- testdata.csv
-|   |-- trainmap.csv
-|   |-- traindata.csv
-|   |-- testmap.csv
-|   |-- testdata.csv
+|   |   |-- readme.md
+|   |   |-- train_data_aug3.2.csv
+|   |   |-- sample_submission_aug3.2.csv
 |-- code
 |   |-- main.py
 |-- submit
-|   |-- submit_20240915.csv
+|   |-- submit_20240822.csv
 ```
-
-## Data Description
-- **`data/` Folder:** Contains the original files provided for the competition.
-- **`external_data/` Folder:** 
-  - This folder can be used for external data sources. 
-  - **Note:** We have not used additional samples from external datasets. Instead, we have calculated additional attributes based on the existing properties. For instance, we computed the matching degree between siRNA and target mRNA, which provides valuable insights for the prediction model. This approach allows us to enhance the dataset without increasing the number of samples.
-
-## Usage Instructions
-1. **Install Dependencies:**
-   ```bash
-   conda env create -f environment.yaml
-   ```
-   Activate the environment:
-   ```bash
-   conda activate clean_uniport
-   ```
-
-2. **Run the Code:**
-   Execute the main script to start the prediction process:
-   ```bash
-   python code/main.py
-   ```
-
-   Ensure that the script is configured to read input files from the `data/` folder and save the results to the `submit/` folder.
-
-## Results Output
-- Results will be saved in the `submit/` folder with filenames in the format `submit_YYYYMMDD_HHMMSS.csv`.
 
 ## Random Seed
-- To ensure reproducibility, random seeds are set in the code. If your results vary significantly, it will affect the evaluation.
-
-## Notes
-- Ensure all code is properly commented to facilitate code review.
-- Use relative paths for file reading, such as `../data/XX`.
-
-## Contact Information
-For any questions or issues, please contact [Your Name](your.email@example.com).
-```
+- To ensure reproducibility, random seeds are set in the code. 
