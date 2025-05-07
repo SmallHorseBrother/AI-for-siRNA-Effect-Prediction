@@ -1,4 +1,4 @@
-# AI-for-siRNA-Effect-Prediction
+# AI-for-siRNA-Effect-Prediction（第二界世界AI4S大赛 11名/2200+队伍 ）
 
 ## Project Overview
 This project aims to predict the effects of siRNA drugs for the World Second AI4Science Competition. The code and environment setup described here are intended to ensure that results can be reproduced consistently.
